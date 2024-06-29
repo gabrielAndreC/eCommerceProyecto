@@ -1,0 +1,14 @@
+@import './layout/nav.scss';
+@import './layout/itemListC.scss';
+*{
+    font-family: 'Poppins';
+    margin: 0;
+    padding: 0;
+}
+body{
+    padding: 0;
+    margin: 0;
+    .appWrapper{
+        height: 100vh;
+    }
+}
