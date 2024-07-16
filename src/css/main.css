@@ -125,11 +125,15 @@ nav .cartWidget:hover {
   align-items: center;
   margin-bottom: 16px;
 }
+.itemCard .itemImg {
+  background-color: white;
+  margin: 8px;
+  border-radius: 14px;
+}
 .itemCard img {
-  max-width: 250px;
-  max-height: 250px;
-  padding: 8px;
-  border-radius: 22px;
+  object-fit: contain;
+  width: 250px;
+  height: 200px;
 }
 .itemCard .precio {
   font-size: 20px;

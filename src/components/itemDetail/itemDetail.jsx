@@ -4,7 +4,9 @@ const ItemDetail = ({id, nombre, precio, categ, stock, img, desc}) =>{
 
     return(
         <div className="itemCard detail">
+            <div className="itemImg">
             <img src={img} alt={nombre} />
+            </div>
             <div className="detailInfo">
                 <h2>{nombre}</h2>
                 <span className="precio">Precio ${precio}</span>
