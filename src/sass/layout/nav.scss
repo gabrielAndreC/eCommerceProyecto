@@ -10,15 +10,18 @@ nav{
     background-color: rgb(80, 59, 52);
     color: white;
     padding: 0 16px;
+    width: calc(100vw - 32px);
     .navNombre{
         grid-area: nombre;
         justify-self: left;
         font-size: 28px;
         margin: 0;
+        color: white;
+        text-decoration: none;
     }
     .navCategorias{
         grid-area: categorias;
-        button{
+        .navBtn{
             border: unset;
             background-color: unset;
             color: white;
@@ -26,6 +29,7 @@ nav{
             min-width: 64px;
             height: auto;
             margin: 0 16px;
+            text-decoration: none;
             &:hover{
                 background-color: rgb(126, 101, 93);
                 cursor: pointer;

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 nav {
   display: grid;
   grid-template-columns: 33.3333333333% 33.3333333333% 33.3333333333%;
@@ -9,17 +10,20 @@ nav {
   background-color: rgb(80, 59, 52);
   color: white;
   padding: 0 16px;
+  width: calc(100vw - 32px);
 }
 nav .navNombre {
   grid-area: nombre;
   justify-self: left;
   font-size: 28px;
   margin: 0;
+  color: white;
+  text-decoration: none;
 }
 nav .navCategorias {
   grid-area: categorias;
 }
-nav .navCategorias button {
+nav .navCategorias .navBtn {
   border: unset;
   background-color: unset;
   color: white;
@@ -27,12 +31,13 @@ nav .navCategorias button {
   min-width: 64px;
   height: auto;
   margin: 0 16px;
+  text-decoration: none;
 }
-nav .navCategorias button:hover {
+nav .navCategorias .navBtn:hover {
   background-color: rgb(126, 101, 93);
   cursor: pointer;
 }
-nav .navCategorias button:active {
+nav .navCategorias .navBtn:active {
   background-color: rgb(46, 33, 28);
 }
 nav .cartWidget {
@@ -45,11 +50,141 @@ nav .cartWidget:hover {
 }
 
 .itemListC {
-  width: auto;
-  height: calc(100% - 48px);
+  width: 80%;
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+}
+.itemListC .itemList {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.itemDetailC {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contador {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 200px;
+}
+.contador .contadorUi {
+  background-color: rgba(22, 41, 128, 0.2);
+  border-radius: 8px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.contador .contadorUi .contadorCantidad {
+  color: black;
+  width: 100%;
+  padding: 5px 0;
+  font-size: 24px;
+  text-align: center;
+}
+
+.botonContador {
+  width: 100px;
+  height: 50px;
+  background-color: #2c52ff;
+  border: none;
+  color: white;
+  border-radius: 8px;
+}
+.botonContador:active {
+  border: 2px solid #2c52ff;
+  background-color: white;
+  color: black;
+}
+
+.btnañadir {
+  margin-top: 10px;
+  padding: 5px 0;
+  width: 100%;
+}
+
+.itemCard {
+  background-color: #d1bdba;
+  border-radius: 16px;
+  max-width: 300px;
+  max-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.itemCard img {
+  max-width: 250px;
+  max-height: 250px;
+  padding: 8px;
+  border-radius: 22px;
+}
+.itemCard .precio {
+  font-size: 20px;
+  font-weight: 500;
+}
+.itemCard button {
+  border: unset;
+  background-color: rgba(126, 101, 93, 0.5);
+  border-radius: 4px;
+  padding: 2px 10px;
+  margin-bottom: 8px;
+  font-size: 18px;
+  min-width: 64px;
+  height: auto;
+  color: white;
+}
+.itemCard button:hover {
+  cursor: pointer;
+}
+.itemCard button:active {
+  color: black;
+  background-color: rgb(255, 255, 255);
+}
+
+.detail {
+  max-width: unset;
+  max-height: fit-content;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+}
+.detail img {
+  max-width: 400px;
+  max-height: 400px;
+}
+.detail .detailInfo {
+  display: flex;
+  flex-direction: column;
+}
+.detail .count {
+  margin: 0;
+}
+.detail .count .contador {
+  height: fit-content;
+}
+.detail .count .contador button {
+  margin: 0;
+  border-radius: 8px;
+}
+.detail .count .contador button:active {
+  border: none;
+}
+.detail .count .contador .btnañadir {
+  margin-top: 16px;
+  padding: 5px 0;
 }
 
 * {
@@ -63,6 +198,10 @@ body {
   margin: 0;
 }
 body .appWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
   height: 100vh;
 }
 
