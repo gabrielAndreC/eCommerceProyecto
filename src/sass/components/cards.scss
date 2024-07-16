@@ -17,7 +17,7 @@
         font-size: 20px;
         font-weight: 500;   
     }
-    button{
+    .cardBtn{
         border: unset;
         background-color: rgba(126, 101, 93, 0.5);
         border-radius: 4px;
@@ -27,6 +27,7 @@
         min-width: 64px;
         height: auto;
         color: white;
+        text-decoration: none;
         &:hover{
             cursor: pointer;
         }

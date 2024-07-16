@@ -135,7 +135,7 @@ nav .cartWidget:hover {
   font-size: 20px;
   font-weight: 500;
 }
-.itemCard button {
+.itemCard .cardBtn {
   border: unset;
   background-color: rgba(126, 101, 93, 0.5);
   border-radius: 4px;
@@ -145,11 +145,12 @@ nav .cartWidget:hover {
   min-width: 64px;
   height: auto;
   color: white;
+  text-decoration: none;
 }
-.itemCard button:hover {
+.itemCard .cardBtn:hover {
   cursor: pointer;
 }
-.itemCard button:active {
+.itemCard .cardBtn:active {
   color: black;
   background-color: rgb(255, 255, 255);
 }

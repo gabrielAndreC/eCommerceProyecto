@@ -13,7 +13,6 @@ function App() {
         <Routes>
           <Route path='/' element={<ItemListContainer greeting={"Bienvenido!"}/>}/>
           <Route path='/dist/index.html' element={<ItemListContainer greeting={"Bienvenido!"}/>}/>
-          <Route path='/eCommerceProyecto/dist/index.html' element={<ItemListContainer greeting={"Bienvenido!"}/>}/>
           <Route path='/categoria/:categoryId' element={<ItemListContainer/>}/>
           <Route path='/item/:itemId' element={<ItemDetailContainer/>}/>
           <Route path='*' element={<h1>404 N0T F0UND</h1>}/>
