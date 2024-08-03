@@ -47,13 +47,18 @@
     width: 100%;
     flex-direction: row;
     align-items: center;
-    img{
+    justify-content: center;
+    margin: 8px 0;
+    padding: 8px 0;
+    .itemImg{
         max-width: 400px;
         max-height: 400px;
+        margin: 0;
     }
     .detailInfo{
         display: flex;
         flex-direction: column;
+        margin: 0 16px;
     }
     .count{
         margin: 0;
@@ -69,6 +74,36 @@
             .btnañadir{
                 margin-top: 16px;
                 padding: 5px 0;
+            }
+        }
+    }
+}
+
+.cartItem{
+    width: 800px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #d1bdba;
+    &:nth-of-type(even){
+        background-color: #b69590;
+    }
+    img{width: 80px;}
+    .cartItemInfo{
+        display: flex;
+        width: 50%;
+        justify-content: space-around;
+        align-items: center;
+        span{
+            font-weight: 500;
+        }
+    }
+    .cartItemBotones{
+        button{
+            margin-right: 16px;
+            &:last-of-type{
+                margin-right: unset;
             }
         }
     }

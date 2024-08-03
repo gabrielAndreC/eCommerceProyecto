@@ -1,0 +1,38 @@
+.botonLink{
+    cursor: pointer;
+    font-size: 13px;
+    text-decoration: none;
+    background-color: white;
+    padding: 8px;
+    color: black;
+    font-family: 'poppins';
+    border-radius: 8px;
+    background-color: #2c52ff;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    &:active{
+        border: 2px solid #2c52ff;
+        background-color: white;
+        color: black;
+    }
+}
+.itemDt{
+    &:last-of-type{
+        margin-top: 8px;
+    }
+}
+.quit{
+    height: unset;
+    width: auto;
+    padding: 8px;
+    background-color: #ff2c37;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    &:active{
+        border: 2px solid #ff2c37;
+        background-color: white;
+        color: black;
+    }
+}

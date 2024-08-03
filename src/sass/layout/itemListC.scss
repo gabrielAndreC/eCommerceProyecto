@@ -4,7 +4,9 @@
     flex-direction: column;
     align-items:center;
     justify-content: center;
+    margin-top: 8px;
     .itemList{
+        margin-top: 8px;
         display: flex;
         width: 100%;
         flex-direction: row;
@@ -13,7 +15,7 @@
     }
 }
 .itemDetailC{
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     align-items:center;

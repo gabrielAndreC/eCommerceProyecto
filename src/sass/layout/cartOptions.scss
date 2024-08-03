@@ -1,0 +1,33 @@
+.cartTotal{
+    font-size: 26px;
+    width: auto;
+    background-color: rgb(80, 59, 52);
+    color: white;
+    padding: 0 16px;
+}
+.cartOptions{
+    background-color: rgb(80, 59, 52);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+    padding: 0 16px 16px 16px;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    .linkOptions{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 250px;
+    }
+    .quit{
+        margin-left: auto;
+    }
+}
+.cartNot{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

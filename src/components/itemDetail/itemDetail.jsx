@@ -12,7 +12,7 @@ const ItemDetail = ({id, nombre, precio, categ, stock, img, desc}) =>{
     const onAddHandler = (cantidad) =>  {
         setCantidadAgregada(cantidad)
 
-        const item = {id,nombre,precio,img}
+        const item = {id,nombre,precio,img,stock}
         addItem(item,cantidad)
     }
  
@@ -27,20 +27,19 @@ const ItemDetail = ({id, nombre, precio, categ, stock, img, desc}) =>{
                 <span className="stock">Disponibles: {stock}</span>
                 <p className="desc">Descripción: {desc}</p>
                 <span className="categoria">Categoria: {categ}</span>
-                
-                <div className="itemCard count">
+            </div>
+            <div className="itemCard count">
                     {
                         cantidadAgregada > 0 ? (
-                            <div>
-                                <Link to="/cart" className="botonContador">Terminar Compra</Link>
-                                <Link to="/" className="botonContador">Seguir Comprando</Link>
+                            <div className="itemCard opciones">
+                                <Link to="/cart" className="botonLink itemDt">Terminar Compra</Link>
+                                <Link to="/" className="botonLink itemDt">Seguir Comprando</Link>
                             </div>
                         ) : (
                             <ItemCount initial={1} stock={stock} onAdd={onAddHandler}/>
                         )
                     }
                 </div>
-            </div>
         </div> 
     )
 }

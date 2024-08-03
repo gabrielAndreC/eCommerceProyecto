@@ -29,6 +29,22 @@ export const CartProvider = ({children}) => {
         setCart(cartUpdate)
     }
 
+    const sumarItem = (itemId, stock) =>{
+        const item = cart.findIndex(i => i.id === itemId)
+        if (cart[item].cantidad < stock){
+        cart[item].cantidad = cart[item].cantidad +1;
+        }
+        setCart([...cart])
+    }
+
+    const restarItem = (itemId) =>{
+        const item = cart.findIndex(i => i.id === itemId)
+        if (cart[item].cantidad > 1){
+            cart[item].cantidad = cart[item].cantidad -1;
+            }
+        setCart([...cart])
+    }
+
     const cartClear = () =>{
         setCart([])
     }
@@ -52,7 +68,7 @@ export const CartProvider = ({children}) => {
     }
     
     return(
-        <CartContext.Provider value={{cart, isInCart, addItem, removeItem, cartClear, cantidadTotal, total}}>
+        <CartContext.Provider value={{cart, isInCart, addItem, removeItem, cartClear, cantidadTotal, total, restarItem, sumarItem}}>
             {children}
         </CartContext.Provider>
     )

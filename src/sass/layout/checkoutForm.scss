@@ -1,0 +1,46 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+.checkoutContainer{
+    h1{
+        text-align: center;
+    }
+}
+.checkoutFormContainer{
+    margin-top: 16px;
+    width: 300px;
+    .checkoutFormField{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
+        label{
+            font-size: 18px;
+        }
+        input{
+            height: 28px;
+            padding: 0 8px;
+        }
+    }
+}
+.checkoutOrdenCreada{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkoutOutStock{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
